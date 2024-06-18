@@ -1,4 +1,3 @@
-import "./styles.sass";
 
 export const Footer = () => {
   return (

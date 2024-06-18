@@ -1,0 +1,39 @@
+@use 'variables'
+@use 'mixins'
+
+.containerHome
+  @include mixins.flex-column
+  gap: 68px
+.header
+  @include mixins.flex-row
+  color: variables.$pink
+  margin: 64px 0
+  padding: 0 116px
+  height: 556px
+  h1
+    font-weight: bold
+    font-size: 4rem
+    color: variables.$sandy-brown
+    margin-bottom: 28px
+  p
+    font-size: 1.25rem
+    margin-bottom: 25px
+.bold
+  font-weight: bold
+  margin-bottom: 10px
+
+.textAndButtons
+  @include mixins.flex-column
+
+.buttons
+  display: flex
+  gap: 1rem
+
+.imgContaier
+  background: variables.$light-sea3
+  box-shadow: variables.$shadow-slate-dark
+  width: 412px
+  height: 556px
+  &:hover
+    background: variables.$pink
+    box-shadow: variables.$shadow-rosy-dark

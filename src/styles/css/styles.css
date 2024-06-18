@@ -1,0 +1,305 @@
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F2BDC7;
+  margin: 64px 0;
+  padding: 0 116px;
+  height: 556px;
+}
+.header h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #F3B56C;
+  margin-bottom: 28px;
+}
+.header p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.bold {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textAndButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.imgContaier {
+  background: #308C84;
+  box-shadow: #013A41 10px 10px 0px;
+  width: 412px;
+  height: 556px;
+}
+.imgContaier:hover {
+  background: #F2BDC7;
+  box-shadow: #723822 10px 10px 0px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.25rem;
+  padding: 0 7.25rem;
+  background-color: #0C282B;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 0 116px;
+  gap: 48px;
+}
+.projects .titleAndButton {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.projects .titleAndButton h2 {
+  color: #F3B56C;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.projects .titleAndButton .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F3B56C;
+  color: #723822;
+  padding: 16px;
+  gap: 8px;
+  max-height: 48px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.projectContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 72px;
+}
+
+.projectCard {
+  height: 692px;
+  padding: 3rem;
+  background: #017369;
+  border: solid 10px #F2BDC7;
+  box-shadow: #835251 10px 10px 0px;
+}
+.projectCard .hover {
+  display: none;
+}
+.projectCard:hover {
+  background: #0C282B;
+  border: solid 10px #017369;
+  box-shadow: #013A41 10px 10px 0px;
+}
+.projectCard:hover .hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.projectCard:hover .hover .tags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.projectCard:hover .hover .tags .tag {
+  background: #308C84;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.projectCard:hover .hover .tags .tag:hover {
+  background: #013A41;
+  box-shadow: #308C84 6px 6px 0px;
+}
+.projectCard:hover .hover .titleDescription {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #C0E7E3;
+}
+.projectCard:hover .hover .viewMore {
+  background: #F2BDC7;
+  color: #723822;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.projectCard:hover .hover .viewMore:hover {
+  background: #723822;
+  box-shadow: #F2BDC7 6px 6px 0px;
+  color: #F2BDC7;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 116px;
+  background: #017369;
+  color: #C0E7E3;
+}
+.contactForm h2 {
+  font-size: 2.37rem;
+  font-weight: bold;
+  width: 428px;
+}
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 722px;
+  gap: 1rem;
+  background: #F2BDC7;
+  box-shadow: #723822 10px 10px 0px;
+}
+.contactForm form input, .contactForm form textarea {
+  width: 98%;
+  background: #F3B56C;
+  box-shadow: #835251 6px 6px 0px;
+  border: none;
+  padding: 8px;
+}
+.contactForm form input::placeholder, .contactForm form textarea::placeholder {
+  font-size: 1.25rem;
+  color: #723822;
+}
+.contactForm form h3 {
+  font-weight: bold;
+  font-size: 2.25rem;
+  color: #132223;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.footer {
+  background-color: rgba(129, 36, 36, 0.7960784314);
+  color: #fff;
+  padding: 1rem;
+}
+
+.button {
+  display: flex;
+  cursor: pointer;
+  width: 12rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.slate {
+  background: #308C84;
+  color: #132223;
+}
+.slate:hover {
+  background: #013A41;
+  color: #308C84;
+  box-shadow: #308C84 6px 6px 0px;
+}
+
+.rose {
+  background: #9F5E5D;
+  color: #F2BDC7;
+}
+.rose:hover {
+  background: #723822;
+  box-shadow: #835251 6px 6px 0px;
+}
+
+body {
+  font-family: Space Mono, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, textarea {
+  font-size: 16px;
+}
+
+body {
+  background-color: #132223;
+  color: #013A41;
+}
+body a {
+  color: #017369;
+  text-decoration: none;
+  transition: 0.4s;
+}
+body a ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body a ul li {
+  display: inline;
+  font-weight: bold;
+}
+
+button, input {
+  font-family: Space Mono, sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

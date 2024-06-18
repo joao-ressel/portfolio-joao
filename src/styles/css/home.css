@@ -1,0 +1,53 @@
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F2BDC7;
+  margin: 64px 0;
+  padding: 0 116px;
+  height: 556px;
+}
+.header h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #F3B56C;
+  margin-bottom: 28px;
+}
+.header p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.bold {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textAndButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.imgContaier {
+  background: #308C84;
+  box-shadow: #013A41 10px 10px 0px;
+  width: 412px;
+  height: 556px;
+}
+.imgContaier:hover {
+  background: #F2BDC7;
+  box-shadow: #723822 10px 10px 0px;
+}
+
+/*# sourceMappingURL=home.css.map */

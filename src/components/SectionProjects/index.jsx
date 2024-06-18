@@ -1,12 +1,12 @@
 import { ProjectCard } from "../ProjectCard";
-import "./styles.sass";
+import {FunnelSimple} from "@phosphor-icons/react"
 
 export const SectionsProjects = () => {
   return (
     <section className="projects">
       <div className="titleAndButton">
         <h2>Projects</h2>
-        <button className="filterButton">Filter by...</button>
+        <button className="filterButton"><FunnelSimple size={24} weight="bold"/> Filter by...</button>
       </div>
       <div className="projectContainer">
         <ProjectCard

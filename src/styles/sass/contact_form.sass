@@ -1,0 +1,51 @@
+@use 'variables'
+@use 'mixins'
+
+.contactForm
+  @include mixins.flex-row
+  padding: 116px
+  background: variables.$slate-gray1
+  color: variables.$light-sea1
+  h2
+    font-size: 2.37rem
+    font-weight: bold
+    width: 428px
+  
+  form
+    @include mixins.flex-column
+    padding: 16px
+    width: 722px
+    gap: 1rem
+    background: variables.$pink
+    box-shadow: variables.$shadow-rosy-dark
+    input,textarea
+        width: 98%
+        background: variables.$sandy-brown
+        box-shadow: variables.$shadow-rosy
+        border: none
+        padding: 8px
+        &::placeholder
+            font-size: 1.25rem
+            color: variables.$saddle-brown
+    h3
+        font-weight: bold
+        font-size: 2.25rem
+        color: variables.$slate-gray4
+
+
+.input
+  display: block
+  width: 100%
+  margin: 10px 0
+
+.textarea
+  display: block
+  width: 100%
+  height: 100px
+  margin: 10px 0
+
+.button
+  padding: 10px 20px
+  font-size: 16px
+  cursor: pointer
+  border: none
