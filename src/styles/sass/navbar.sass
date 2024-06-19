@@ -1,5 +1,6 @@
 @use 'variables'
 @use 'mixins'
+
 .nav
   display: flex
   justify-content: space-between
@@ -7,19 +8,16 @@
   height: 7.25rem
   padding: 0 7.25rem
   
-
 .logo
   width: 60px
   height: 60px
-  background: #fff
-  background-image: url("../assets/logo-pink.png")
+  background: url("https://raw.githubusercontent.com/joao-ressel/portfolio-joao/main/src/assets/logo-pink.png") no-repeat top center/cover
   &:hover
-    color: variables.$slate-gray1
-      
+    background: url("https://raw.githubusercontent.com/joao-ressel/portfolio-joao/main/src/assets/logo-slate.png") no-repeat top center/cover
 
 .navlinks
-  @include mixins.flex-center
-  width: 50%
+  @include mixins.flex-row
+  width: 532px
   list-style: none
   gap: 1rem
   a

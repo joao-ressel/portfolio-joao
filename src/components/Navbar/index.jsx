@@ -3,8 +3,7 @@ import {LinkedinLogo, InstagramLogo, GithubLogo} from "@phosphor-icons/react"
 export const Navbar = () => {
   return (
     <nav className="nav">
-     <Link  to="/">
-        <div className="logo"></div>
+     <Link className="logo" to="/">
      </Link>
       <ul className="navlinks">
         <li><Link to="/about">ABOUT</Link></li>
