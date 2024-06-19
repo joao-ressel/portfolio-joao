@@ -56,24 +56,47 @@
   align-items: center;
   height: 7.25rem;
   padding: 0 7.25rem;
-  background-color: #0C282B;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  background-image: url("../assets/logo-pink.png");
+}
+.logo:hover {
+  color: #017369;
 }
 
 .navlinks {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
   list-style: none;
   gap: 1rem;
+}
+.navlinks a {
+  color: #F2BDC7;
+  font-weight: bold;
   font-size: 1.25rem;
+}
+.navlinks a:hover {
+  color: #017369;
 }
 
 .icons {
   display: flex;
   gap: 10px;
+}
+.icons svg {
+  background: #F2BDC7;
+  color: #132223;
+  border-radius: 50%;
+  padding: 4px;
+}
+.icons svg:hover {
+  background: #017369;
 }
 
 .projects {

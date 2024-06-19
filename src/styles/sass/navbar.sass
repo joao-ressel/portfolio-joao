@@ -1,23 +1,42 @@
 @use 'variables'
-
+@use 'mixins'
 .nav
   display: flex
   justify-content: space-between
   align-items: center
   height: 7.25rem
   padding: 0 7.25rem
-  background-color: variables.$slate-gray3
+  
 
 .logo
-  font-size: 24px
-  font-weight: bold
+  width: 60px
+  height: 60px
+  background: #fff
+  background-image: url("../assets/logo-pink.png")
+  &:hover
+    color: variables.$slate-gray1
+      
 
 .navlinks
-  display: flex
+  @include mixins.flex-center
+  width: 50%
   list-style: none
   gap: 1rem
-  font-size: 1.25rem
+  a
+    color: variables.$pink
+    font-weight: bold
+    font-size: 1.25rem
+    &:hover
+      color: variables.$slate-gray1
 
 .icons
   display: flex
   gap: 10px
+  svg
+    background: variables.$pink
+    color: variables.$slate-gray4
+    border-radius: 50%
+    padding: 4px
+    &:hover
+      background: variables.$slate-gray1
+
