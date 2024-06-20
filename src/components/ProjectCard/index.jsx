@@ -1,7 +1,7 @@
 
-export const ProjectCard = ({ name, description, link, tags }) => {
+export const ProjectCard = ({ name, description, link, tags, id }) => {
   return (
-    <div className="projectCard">
+    <div className="projectCard" id={id}>
       <div className="hover">
       <div className="tags">
         {tags.map((tag) => (

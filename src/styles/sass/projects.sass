@@ -32,16 +32,13 @@
 .projectCard
     height: 692px
     padding: 3rem
-    background: variables.$slate-gray1
     border: solid 10px variables.$pink
     box-shadow: variables.$shadow-rosy-projects
     .hover
         display: none
     &:hover
-        background: variables.$slate-gray3
         border: solid 10px variables.$slate-gray1
         box-shadow: variables.$shadow-slate-dark
-        
         .hover
             @include mixins.flex-column-center
             width: 100%
@@ -78,3 +75,8 @@
                     background: variables.$saddle-brown
                     box-shadow: variables.$shadow-pink
                     color: variables.$pink
+
+#ideal
+    @include mixins.bg-img('ideal.jpg')
+#easylab
+    @include mixins.bg-img('easy-lab.jpg')
