@@ -43,8 +43,11 @@
   text-align: center;
 }
 
-.textarea {
+textarea {
   height: 100px;
+  border: none;
+  background: #723822;
+  box-shadow: #723822 10px 10px 0px;
 }
 
 .button {

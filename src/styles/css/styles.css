@@ -200,9 +200,10 @@
   color: #C0E7E3;
 }
 .contactForm h2 {
-  font-size: 2.37rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  width: 428px;
+  width: 400px;
+  line-height: 1.5;
 }
 .contactForm form {
   display: flex;
@@ -210,24 +211,34 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  width: 722px;
+  width: 60%;
   gap: 1rem;
   background: #F2BDC7;
-  box-shadow: #723822 10px 10px 0px;
+  box-shadow: #835251 6px 6px 0px;
 }
 .contactForm form input, .contactForm form textarea {
   display: block;
-  width: 100%;
   margin: 10px 0;
   width: 96%;
   background: #F3B56C;
   box-shadow: #835251 6px 6px 0px;
   border: none;
   padding: 8px;
+  font-size: 1.25rem;
 }
 .contactForm form input::placeholder, .contactForm form textarea::placeholder {
   font-size: 1.25rem;
   color: #723822;
+}
+.contactForm form input:focus, .contactForm form textarea:focus {
+  outline: none;
+  border: none;
+  background: #723822;
+  box-shadow: #F3B56C 6px 6px 0px;
+  color: #F2BDC7;
+}
+.contactForm form input:focus::placeholder, .contactForm form textarea:focus::placeholder {
+  color: #F2BDC7;
 }
 .contactForm form h3 {
   font-weight: bold;
@@ -236,8 +247,12 @@
   text-align: center;
 }
 
-.textarea {
-  height: 100px;
+textarea {
+  height: 124px;
+}
+
+input {
+  height: 52px;
 }
 
 .button {

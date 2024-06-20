@@ -7,37 +7,50 @@
   background: variables.$slate-gray1
   color: variables.$light-sea1
   h2
-    font-size: 2.37rem
+    font-size: 2.5rem
     font-weight: bold
-    width: 428px
+    width: 400px
+    line-height: 1.5
   
   form
     @include mixins.flex-column-center
     padding: 24px
-    width: 722px
+    width: 60%
     gap: 1rem
     background: variables.$pink
-    box-shadow: variables.$shadow-rosy-dark
+    box-shadow: variables.$shadow-rosy
     input,textarea
         display: block
-        width: 100%
         margin: 10px 0
         width: 96%
         background: variables.$sandy-brown
         box-shadow: variables.$shadow-rosy
         border: none
         padding: 8px
+        font-size: 1.25rem
         &::placeholder
             font-size: 1.25rem
             color: variables.$saddle-brown
+        &:focus
+          outline: none
+          border: none
+          background: variables.$saddle-brown
+          box-shadow: variables.$shadow-sandy
+          color: variables.$pink
+          &::placeholder
+            color: variables.$pink
+        
     h3
         font-weight: bold
         font-size: 2.25rem
         color: variables.$slate-gray4
         text-align: center
 
-.textarea
-  height: 100px
+textarea
+  height: 124px
+
+input
+  height: 52px
 
 .button
   border: none
