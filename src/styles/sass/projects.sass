@@ -3,7 +3,6 @@
 
 .projects
     @include mixins.flex-column
-    margin: 0 116px
     gap: 48px
     .titleAndButton
         display: flex
@@ -18,22 +17,52 @@
             @include mixins.flex-row
             background: variables.$sandy-brown
             color: variables.$saddle-brown
-            padding: 16px
+            padding: 0 16px
             gap: 8px
             max-height: 48px
-            font-size: 1rem
             font-weight: bold
+            font-size: 1rem
+            position: relative
+            border-radius: 0
+            label
+                @include mixins.flex-row
+                gap: 1rem
+            &:hover
+                box-shadow: variables.$shadow-brown
+            select
+                width: 100%
+                border: none
+
+                font-weight: bold
+                font-size: 1rem
+                color: variables.$saddle-brown
+                background-color: variables.$sandy-brown
+                appearance: none
+
+                padding: 0 16px
+                position: absolute
+                top: 2
+                left: 0
+                opacity: 0
+
+                &:focus, &:active
+                    outline: none
+                
+                option
+                    .hovered, &:checked, &:focus
+                        background-color: variables.$saddle-brown
+                        color: variables.$white
 
 .projectContainer
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    gap: 72px
+    gap: 5rem
 
 .projectCard
-    height: 692px
+    height: 680px
     padding: 3rem
-    border: solid 10px variables.$pink
-    box-shadow: variables.$shadow-rosy-projects
+    border: solid 10px variables.$slate-gray2
+    box-shadow: variables.$shadow-slate
     .hover
         display: none
     &:hover
@@ -43,12 +72,12 @@
             @include mixins.flex-column-center
             width: 100%
             height: 100%
-            
+
             .tags
                 display: flex
                 gap: 1rem
                 flex-wrap: wrap
-                
+
                 .tag
                     background: variables.$light-sea3
                     color: variables.$white
@@ -58,12 +87,18 @@
                     &:hover
                         background: variables.$slate-gray2
                         box-shadow: variables.$shadow-slate
-            
+
             .titleDescription
+                @include mixins.flex-column
+                gap: 4rem
                 text-align: center
-                font-size: 2.25rem
                 font-weight: bold
                 color: variables.$light-sea1
+                .title
+                    font-size: 2.25rem
+                .description
+                    font-size: 1.5rem
+                    color: variables.$white
 
             .viewMore
                 background: variables.$pink
@@ -80,3 +115,15 @@
     @include mixins.bg-img('ideal.jpg')
 #easylab
     @include mixins.bg-img('easy-lab.jpg')
+#atena
+    @include mixins.bg-img('atena.jpg')
+#idyProgram
+    @include mixins.bg-img('idy-program.jpg')
+#igniteFeed
+    @include mixins.bg-img('ignite-feed.png')
+#coffeeHouse
+    @include mixins.bg-img('coffee-house.jpg')
+#coffeeDelivery
+    @include mixins.bg-img('coffee-delivery.png')
+#visionGallery
+    @include mixins.bg-img('vision-gallery.png')

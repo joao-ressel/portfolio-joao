@@ -1,16 +1,8 @@
-.containerHome {
-  display: flex;
-  flex-direction: column;
-  gap: 68px;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #F2BDC7;
-  margin: 64px 0;
-  padding: 0 116px;
   height: 556px;
 }
 .header h1 {
@@ -44,6 +36,12 @@
   box-shadow: #013A41 10px 10px 0px;
   width: 412px;
   height: 556px;
+  display: flex;
+}
+.imgContaier img {
+  height: auto;
+  width: 412px;
+  align-self: flex-end;
 }
 .imgContaier:hover {
   background: #F2BDC7;
@@ -101,7 +99,6 @@
 .projects {
   display: flex;
   flex-direction: column;
-  margin: 0 116px;
   gap: 48px;
 }
 .projects .titleAndButton {
@@ -120,24 +117,56 @@
   align-items: center;
   background: #F3B56C;
   color: #723822;
-  padding: 16px;
+  padding: 0 16px;
   gap: 8px;
   max-height: 48px;
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  border-radius: 0;
+}
+.projects .titleAndButton .filterButton label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.projects .titleAndButton .filterButton:hover {
+  box-shadow: #723822 6px 6px 0px;
+}
+.projects .titleAndButton .filterButton select {
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #723822;
+  background-color: #F3B56C;
+  appearance: none;
+  padding: 0 16px;
+  position: absolute;
+  top: 2;
+  left: 0;
+  opacity: 0;
+}
+.projects .titleAndButton .filterButton select:focus, .projects .titleAndButton .filterButton select:active {
+  outline: none;
+}
+.projects .titleAndButton .filterButton select option .hovered, .projects .titleAndButton .filterButton select option:checked, .projects .titleAndButton .filterButton select option:focus {
+  background-color: #723822;
+  color: #fff;
 }
 
 .projectContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 72px;
+  gap: 5rem;
 }
 
 .projectCard {
-  height: 692px;
+  height: 680px;
   padding: 3rem;
-  border: solid 10px #F2BDC7;
-  box-shadow: #835251 10px 10px 0px;
+  border: solid 10px #013A41;
+  box-shadow: #308C84 6px 6px 0px;
 }
 .projectCard .hover {
   display: none;
@@ -171,10 +200,19 @@
   box-shadow: #308C84 6px 6px 0px;
 }
 .projectCard:hover .hover .titleDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   text-align: center;
-  font-size: 2.25rem;
   font-weight: bold;
   color: #C0E7E3;
+}
+.projectCard:hover .hover .titleDescription .title {
+  font-size: 2.25rem;
+}
+.projectCard:hover .hover .titleDescription .description {
+  font-size: 1.5rem;
+  color: #fff;
 }
 .projectCard:hover .hover .viewMore {
   background: #F2BDC7;
@@ -201,15 +239,15 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/ideal.jpg");
-  background-size: 110%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
   z-index: -1;
 }
 #ideal:hover::before {
-  background-size: 120%;
-  opacity: 20%;
+  background-size: 110%;
+  opacity: 10%;
 }
 
 #easylab {
@@ -224,15 +262,153 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/easy-lab.jpg");
-  background-size: 110%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
   z-index: -1;
 }
 #easylab:hover::before {
-  background-size: 120%;
-  opacity: 20%;
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#atena {
+  position: relative;
+  overflow: hidden;
+}
+#atena::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/atena.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#atena:hover::before {
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#idyProgram {
+  position: relative;
+  overflow: hidden;
+}
+#idyProgram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/idy-program.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#idyProgram:hover::before {
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#igniteFeed {
+  position: relative;
+  overflow: hidden;
+}
+#igniteFeed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/ignite-feed.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#igniteFeed:hover::before {
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#coffeeHouse {
+  position: relative;
+  overflow: hidden;
+}
+#coffeeHouse::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/coffee-house.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#coffeeHouse:hover::before {
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#coffeeDelivery {
+  position: relative;
+  overflow: hidden;
+}
+#coffeeDelivery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/coffee-delivery.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#coffeeDelivery:hover::before {
+  background-size: 110%;
+  opacity: 10%;
+}
+
+#visionGallery {
+  position: relative;
+  overflow: hidden;
+}
+#visionGallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/projects-img/vision-gallery.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  z-index: -1;
+}
+#visionGallery:hover::before {
+  background-size: 110%;
+  opacity: 10%;
 }
 
 .contactForm {
@@ -378,7 +554,16 @@ body a ul li {
   font-weight: bold;
 }
 
-button, input {
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: auto;
+  padding: 0 10rem;
+  margin: 0 auto;
+}
+
+button, input, select, option {
   font-family: Space Mono, sans-serif;
 }
 

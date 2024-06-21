@@ -1,10 +1,10 @@
 import { FormContact } from "../../components/FormContact";
 import { Navbar } from "../../components/Navbar";
 import { SectionsProjects } from "../../components/SectionProjects";
-
+import perfil from "../../assets/perfil-joao-sfundo.png";
 export const Home = () => {
   return (
-    <div className="containerHome">
+    <>
       <header className="header">
         <div className="textAndButtons">
           <p className="bold">Hello, World! I&apos;m </p>
@@ -19,12 +19,12 @@ export const Home = () => {
           </div>
         </div>
         <div className="imgContaier">
-          <img src="" alt="" />
+          <img src={perfil} alt="" />
         </div>
       </header>
       <SectionsProjects />
       <FormContact />
       <Navbar />
-    </div>
+    </>
   );
 };
