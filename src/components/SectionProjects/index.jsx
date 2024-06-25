@@ -5,10 +5,10 @@ import { ProjectCard } from "../ProjectCard";
 import { projects } from "./Projects";
 
 export const SectionsProjects = () => {
-  const [sortBy, setSortBy] = useState(null); // Estado para controlar o tipo de filtro
+  const [sortBy, setSortBy] = useState(null);
 
   const handleSortChange = (event) => {
-    setSortBy(event.target.value); // Atualiza o estado com a opção selecionada
+    setSortBy(event.target.value);
   };
 
   const filterProjects = () => {
@@ -27,24 +27,24 @@ export const SectionsProjects = () => {
   };
 
   const handleOptionHover = (e) => {
-    e.target.classList.add('hovered');
+    e.target.classList.add("hovered");
   };
 
   const handleOptionUnhover = (e) => {
-    e.target.classList.remove('hovered');
+    e.target.classList.remove("hovered");
   };
 
   useEffect(() => {
-    const options = document.querySelectorAll('.filterButton select option');
-    options.forEach(option => {
-      option.addEventListener('mouseover', handleOptionHover);
-      option.addEventListener('mouseout', handleOptionUnhover);
+    const options = document.querySelectorAll(".filterButton select option");
+    options.forEach((option) => {
+      option.addEventListener("mouseover", handleOptionHover);
+      option.addEventListener("mouseout", handleOptionUnhover);
     });
 
     return () => {
-      options.forEach(option => {
-        option.removeEventListener('mouseover', handleOptionHover);
-        option.removeEventListener('mouseout', handleOptionUnhover);
+      options.forEach((option) => {
+        option.removeEventListener("mouseover", handleOptionHover);
+        option.removeEventListener("mouseout", handleOptionUnhover);
       });
     };
   }, []);
@@ -59,11 +59,7 @@ export const SectionsProjects = () => {
           <label htmlFor="sortBy">
             <FunnelSimple size={24} weight="bold" /> Filter by...
           </label>
-          <select
-            id="sortBy"
-            value={sortBy}
-            onChange={handleSortChange}
-          >
+          <select id="sortBy" value={sortBy} onChange={handleSortChange}>
             <option value="">Filter by...</option>
             <option value="date">Most Recent</option>
             <option value="importance">The Biggest</option>

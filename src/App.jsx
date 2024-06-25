@@ -10,6 +10,7 @@ import { Projects } from "./pages/Projects";
 import { EasyLab } from "./pages/Projects/EasyLab";
 import { Ideal } from "./pages/Projects/Ideal";
 import { Container } from "./components/Container";
+import { CoffeeHouse } from "./pages/Projects/CoffeeHouse";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/easylab" element={<EasyLab />} />
           <Route path="/projects/ideal" element={<Ideal />} />
+          <Route path="/projects/coffeehouse" element={<CoffeeHouse />} />
         </Routes>
       </Container>
       <Footer />

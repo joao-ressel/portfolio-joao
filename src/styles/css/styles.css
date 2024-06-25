@@ -411,6 +411,14 @@
   opacity: 10%;
 }
 
+main h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #87C3BE;
+}
+
 .contactForm {
   display: flex;
   justify-content: space-between;
