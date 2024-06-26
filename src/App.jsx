@@ -16,18 +16,16 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/easylab" element={<EasyLab />} />
-          <Route path="/projects/ideal" element={<Ideal />} />
-          <Route path="/projects/coffeehouse" element={<CoffeeHouse />} />
-        </Routes>
-      </Container>
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/easylab" element={<EasyLab />} />
+        <Route path="/projects/ideal" element={<Ideal />} />
+        <Route path="/projects/coffeehouse" element={<CoffeeHouse />} />
+      </Routes>
       <Footer />
     </Router>
   );

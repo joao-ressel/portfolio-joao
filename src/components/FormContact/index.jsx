@@ -21,10 +21,10 @@ export const FormContact = () => {
     };
     emailjs
       .send(
-        "service_4me8nml",
-        "template_gufg791",
+        "service_grvc72x",
+        "template_66nta0n",
         templateParams,
-        "mNEYj85spEiEvLzq8"
+        "ubV7ZL7II5IGbxOyk"
       )
       .then(
         (response) => {

@@ -1,10 +1,18 @@
 @use 'variables'
 @use 'mixins'
 
+.paralax
+  height: 100%
+  background: url("../../assets/sizzle.gif") 
+  background-attachment: scroll
+  background-attachment: fixed
+  background-size: contain
+
 .header
   @include mixins.flex-row
   color: variables.$pink
-  height: 556px
+  padding: 8rem
+  height: 100vh
   h1
     font-weight: bold
     font-size: 4rem
@@ -24,7 +32,7 @@
   display: flex
   gap: 1rem
 
-.imgContaier
+.imgContainer
   background: variables.$light-sea3
   box-shadow: variables.$shadow-slate-dark
   width: 412px
@@ -37,3 +45,30 @@
   &:hover
     background: variables.$pink
     box-shadow: variables.$shadow-rosy-dark
+
+@media ( width <= 1199px)
+  .header
+    h1
+      font-weight: bold
+      font-size: 2.5rem
+      margin-bottom: 28px
+    p
+      font-size: 1rem
+      margin-bottom: 25px
+  .imgContainer
+    width: 312px
+    height: 456px
+    img
+      width: 312px
+
+
+@media ( width <= 991px)
+  .header
+    padding: 0 2rem
+    height: 100vh
+  .imgContainer
+    display: none
+  .buttons
+    flex-direction: column
+    .button
+      width: 100%

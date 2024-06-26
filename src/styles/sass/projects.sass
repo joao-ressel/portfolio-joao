@@ -3,11 +3,10 @@
 
 .projects
     @include mixins.flex-column
-    gap: 48px
+    gap: 4rem
     .titleAndButton
-        display: flex
+        @include mixins.flex-row-space
         width: 100%
-        justify-content: space-between
         h2
             color: variables.$sandy-brown
             font-size: 3rem
@@ -47,7 +46,7 @@
 
                 &:focus, &:active
                     outline: none
-                
+
                 option
                     .hovered, &:checked, &:focus
                         background-color: variables.$saddle-brown
@@ -56,10 +55,10 @@
 .projectContainer
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    gap: 5rem
+    gap: 4rem
 
 .projectCard
-    height: 680px
+    height: 762px
     padding: 3rem
     border: solid 10px variables.$slate-gray2
     box-shadow: variables.$shadow-slate
@@ -111,6 +110,71 @@
                     box-shadow: variables.$shadow-pink
                     color: variables.$pink
 
+@media ( width <= 1498px)
+    .projectCard
+        height: 498px
+        padding: 2rem
+        .hover
+            width: 100%
+            justify-content: center
+
+@media ( width <= 992px)
+    .projectContainer
+        gap: 24px
+    .projectCard
+        height: 368px
+        padding: 2rem
+    .projects
+        .titleAndButton
+            flex-direction: column
+            gap: 1rem
+            h2
+                font-size: 1.5rem
+            .filterButton
+                height: 2.5rem
+
+@media ( width <= 768px)
+    .projectContainer
+        grid-template-columns: repeat(1, 1fr)
+        gap: 42px
+    .projectCard
+        height: 586px
+        padding: 1.5rem
+        &:hover
+            .hover
+                .tags
+                    gap: 0.5rem
+                    .tag
+                        padding: 0.5rem
+                        font-size: 0.8rem
+                .titleDescription
+                    gap: 2rem
+                    .title
+                        font-size: 1.5rem
+                    .description
+                        font-size: 0.8rem
+                .viewMore
+                    font-size: 1rem
+
+@media ( width <= 480px)
+    .projectCard
+        height: 389px
+        padding: 1rem
+        &:hover
+            .hover
+                .tags
+                    .tag
+                        padding: 0.5rem
+                        font-size: 1rem
+                        .titleDescription
+                            gap: 2rem
+                            .title
+                                font-size: 2rem
+                            .description
+                                font-size: 0.5rem
+                            .viewMore
+                                padding: 8px
+                                font-size: 0.8rem
 #ideal
     @include mixins.bg-img('ideal.jpg')
 #easylab

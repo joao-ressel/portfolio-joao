@@ -2,11 +2,10 @@
 @use 'mixins'
 
 .nav
-  display: flex
-  justify-content: space-between
+  @include mixins.flex-row-space
   align-items: center
-  height: 7.25rem
-  padding: 0 7.25rem
+  width: 100%
+  background: variables.$slate-gray4
   
 .logo
   width: 60px
@@ -30,6 +29,7 @@
 .icons
   display: flex
   gap: 10px
+  font-size: 1.25rem
   svg
     background: variables.$pink
     color: variables.$slate-gray4
@@ -38,3 +38,35 @@
     &:hover
       background: variables.$slate-gray1
 
+@media ( width <= 1199px)
+  .nav
+    padding: 1rem 6rem
+  .navlinks
+    width: 232px
+    list-style: none
+    gap: 1rem
+    a
+      color: variables.$pink
+      font-weight: bold
+      font-size: 1rem
+      &:hover
+        color: variables.$slate-gray1
+
+  .icons
+    display: flex
+    gap: 10px
+
+    svg
+      background: variables.$pink
+  .logo
+    width: 40px
+    height: 40px
+
+@media (width <= 768px)
+  .nav
+    padding: 2rem 0
+    height: auto
+    .icons
+      flex-direction: column
+    .navlinks
+      flex-direction: column

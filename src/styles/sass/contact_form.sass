@@ -4,14 +4,14 @@
 .contactForm
   @include mixins.flex-row
   padding: 116px
-  background: variables.$slate-gray1
+  gap: 4rem
   color: variables.$light-sea1
   h2
     font-size: 2.5rem
     font-weight: bold
     width: 400px
     line-height: 1.5
-  
+
   form
     @include mixins.flex-column-center
     padding: 24px
@@ -20,17 +20,17 @@
     background: variables.$pink
     box-shadow: variables.$shadow-rosy
     input,textarea
-        display: block
-        margin: 10px 0
-        width: 96%
-        background: variables.$sandy-brown
-        box-shadow: variables.$shadow-rosy
-        border: none
-        padding: 8px
+      display: block
+      margin: 10px 0
+      width: 96%
+      background: variables.$sandy-brown
+      box-shadow: variables.$shadow-rosy
+      border: none
+      padding: 8px
+      font-size: 1.25rem
+      &::placeholder
         font-size: 1.25rem
-        &::placeholder
-            font-size: 1.25rem
-            color: variables.$saddle-brown
+        color: variables.$saddle-brown
         &:focus
           outline: none
           border: none
@@ -39,12 +39,12 @@
           color: variables.$pink
           &::placeholder
             color: variables.$pink
-        
+
     h3
-        font-weight: bold
-        font-size: 2.25rem
-        color: variables.$slate-gray4
-        text-align: center
+      font-weight: bold
+      font-size: 2.25rem
+      color: variables.$slate-gray4
+      text-align: center
 
 textarea
   height: 124px
@@ -54,3 +54,36 @@ input
 
 .button
   border: none
+@media (width <= 1199px)
+  .contactForm
+    padding: 2rem 6rem
+    h2
+      font-size: 1.8rem
+
+@media ( width <= 992px)
+  .contactForm
+    padding: 2rem 4rem
+    h2
+      font-size: 1.5rem
+    form
+      h3
+        font-size: 1.5rem
+      input, textarea
+        font-size: 1rem
+        &::placeholder
+          font-size: 1rem
+      textarea
+        height: 52px
+      input
+        height: 24px
+
+
+@media (width <= 768px)
+  .contactForm
+    @include mixins.flex-column
+    gap: 2rem
+    padding: 2rem 4rem
+    h2
+      width: 100%
+    form
+      width: 100%

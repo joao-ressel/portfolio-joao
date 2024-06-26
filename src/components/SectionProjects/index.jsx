@@ -3,6 +3,7 @@ import { FunnelSimple } from "@phosphor-icons/react";
 
 import { ProjectCard } from "../ProjectCard";
 import { projects } from "./Projects";
+import { Container } from "../Container";
 
 export const SectionsProjects = () => {
   const [sortBy, setSortBy] = useState(null);
@@ -51,6 +52,7 @@ export const SectionsProjects = () => {
 
   const sortedProjects = filterProjects();
   return (
+    <Container>
     <section className="projects">
       <div className="titleAndButton">
         <h2>Projects</h2>
@@ -80,5 +82,6 @@ export const SectionsProjects = () => {
         ))}
       </div>
     </section>
+    </Container>
   );
 };

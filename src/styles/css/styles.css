@@ -1,9 +1,18 @@
+.paralax {
+  height: 100%;
+  background: url("../../assets/sizzle.gif");
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #F2BDC7;
-  height: 556px;
+  padding: 8rem;
+  height: 100vh;
 }
 .header h1 {
   font-weight: bold;
@@ -31,29 +40,62 @@
   gap: 1rem;
 }
 
-.imgContaier {
+.imgContainer {
   background: #308C84;
   box-shadow: #013A41 10px 10px 0px;
   width: 412px;
   height: 556px;
   display: flex;
 }
-.imgContaier img {
+.imgContainer img {
   height: auto;
   width: 412px;
   align-self: flex-end;
 }
-.imgContaier:hover {
+.imgContainer:hover {
   background: #F2BDC7;
   box-shadow: #723822 10px 10px 0px;
 }
 
+@media (width <= 1199px) {
+  .header h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+  }
+  .header p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  .imgContainer {
+    width: 312px;
+    height: 456px;
+  }
+  .imgContainer img {
+    width: 312px;
+  }
+}
+@media (width <= 991px) {
+  .header {
+    padding: 0 2rem;
+    height: 100vh;
+  }
+  .imgContainer {
+    display: none;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons .button {
+    width: 100%;
+  }
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7.25rem;
-  padding: 0 7.25rem;
+  width: 100%;
+  background: #132223;
 }
 
 .logo {
@@ -85,6 +127,7 @@
 .icons {
   display: flex;
   gap: 10px;
+  font-size: 1.25rem;
 }
 .icons svg {
   background: #F2BDC7;
@@ -96,15 +139,56 @@
   background: #017369;
 }
 
+@media (width <= 1199px) {
+  .nav {
+    padding: 1rem 6rem;
+  }
+  .navlinks {
+    width: 232px;
+    list-style: none;
+    gap: 1rem;
+  }
+  .navlinks a {
+    color: #F2BDC7;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .navlinks a:hover {
+    color: #017369;
+  }
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+  .icons svg {
+    background: #F2BDC7;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (width <= 768px) {
+  .nav {
+    padding: 2rem 0;
+    height: auto;
+  }
+  .nav .icons {
+    flex-direction: column;
+  }
+  .nav .navlinks {
+    flex-direction: column;
+  }
+}
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 4rem;
 }
 .projects .titleAndButton {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 .projects .titleAndButton h2 {
   color: #F3B56C;
@@ -159,11 +243,11 @@
 .projectContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .projectCard {
-  height: 680px;
+  height: 762px;
   padding: 3rem;
   border: solid 10px #013A41;
   box-shadow: #308C84 6px 6px 0px;
@@ -227,6 +311,87 @@
   color: #F2BDC7;
 }
 
+@media (width <= 1498px) {
+  .projectCard {
+    height: 498px;
+    padding: 2rem;
+  }
+  .projectCard .hover {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (width <= 992px) {
+  .projectContainer {
+    gap: 24px;
+  }
+  .projectCard {
+    height: 368px;
+    padding: 2rem;
+  }
+  .projects .titleAndButton {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .projects .titleAndButton h2 {
+    font-size: 1.5rem;
+  }
+  .projects .titleAndButton .filterButton {
+    height: 2.5rem;
+  }
+}
+@media (width <= 768px) {
+  .projectContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 42px;
+  }
+  .projectCard {
+    height: 586px;
+    padding: 1.5rem;
+  }
+  .projectCard:hover .hover .tags {
+    gap: 0.5rem;
+  }
+  .projectCard:hover .hover .tags .tag {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .projectCard:hover .hover .titleDescription {
+    gap: 2rem;
+  }
+  .projectCard:hover .hover .titleDescription .title {
+    font-size: 1.5rem;
+  }
+  .projectCard:hover .hover .titleDescription .description {
+    font-size: 0.8rem;
+  }
+  .projectCard:hover .hover .viewMore {
+    font-size: 1rem;
+  }
+}
+@media (width <= 480px) {
+  .projectCard {
+    height: 389px;
+    padding: 1rem;
+  }
+  .projectCard:hover .hover .tags .tag {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .projectCard:hover .hover .tags .tag .titleDescription {
+    gap: 2rem;
+  }
+  .projectCard:hover .hover .tags .tag .titleDescription .title {
+    font-size: 2rem;
+  }
+  .projectCard:hover .hover .tags .tag .titleDescription .description {
+    font-size: 0.5rem;
+  }
+  .projectCard:hover .hover .tags .tag .titleDescription .viewMore {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
 #ideal {
   position: relative;
   overflow: hidden;
@@ -239,11 +404,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/ideal.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #ideal:hover::before {
   background-size: 110%;
@@ -262,11 +426,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/easy-lab.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #easylab:hover::before {
   background-size: 110%;
@@ -285,11 +448,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/atena.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #atena:hover::before {
   background-size: 110%;
@@ -308,11 +470,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/idy-program.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #idyProgram:hover::before {
   background-size: 110%;
@@ -331,11 +492,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/ignite-feed.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #igniteFeed:hover::before {
   background-size: 110%;
@@ -354,11 +514,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/coffee-house.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #coffeeHouse:hover::before {
   background-size: 110%;
@@ -377,11 +536,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/coffee-delivery.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #coffeeDelivery:hover::before {
   background-size: 110%;
@@ -400,11 +558,10 @@
   width: 100%;
   height: 100%;
   background-image: url("../../assets/projects-img/vision-gallery.png");
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.6s;
-  z-index: -1;
 }
 #visionGallery:hover::before {
   background-size: 110%;
@@ -424,7 +581,7 @@ main h2 {
   justify-content: space-between;
   align-items: center;
   padding: 116px;
-  background: #017369;
+  gap: 4rem;
   color: #C0E7E3;
 }
 .contactForm h2 {
@@ -458,14 +615,14 @@ main h2 {
   font-size: 1.25rem;
   color: #723822;
 }
-.contactForm form input:focus, .contactForm form textarea:focus {
+.contactForm form input::placeholder:focus, .contactForm form textarea::placeholder:focus {
   outline: none;
   border: none;
   background: #723822;
   box-shadow: #F3B56C 6px 6px 0px;
   color: #F2BDC7;
 }
-.contactForm form input:focus::placeholder, .contactForm form textarea:focus::placeholder {
+.contactForm form input::placeholder:focus::placeholder, .contactForm form textarea::placeholder:focus::placeholder {
   color: #F2BDC7;
 }
 .contactForm form h3 {
@@ -487,6 +644,51 @@ input {
   border: none;
 }
 
+@media (width <= 1199px) {
+  .contactForm {
+    padding: 2rem 6rem;
+  }
+  .contactForm h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (width <= 992px) {
+  .contactForm {
+    padding: 2rem 4rem;
+  }
+  .contactForm h2 {
+    font-size: 1.5rem;
+  }
+  .contactForm form h3 {
+    font-size: 1.5rem;
+  }
+  .contactForm form input, .contactForm form textarea {
+    font-size: 1rem;
+  }
+  .contactForm form input::placeholder, .contactForm form textarea::placeholder {
+    font-size: 1rem;
+  }
+  .contactForm form textarea {
+    height: 52px;
+  }
+  .contactForm form input {
+    height: 24px;
+  }
+}
+@media (width <= 768px) {
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 4rem;
+  }
+  .contactForm h2 {
+    width: 100%;
+  }
+  .contactForm form {
+    width: 100%;
+  }
+}
 .footer {
   display: flex;
   align-items: center;
@@ -544,8 +746,8 @@ input, textarea {
 }
 
 body {
-  background-color: #132223;
   color: #013A41;
+  background-color: #132223;
 }
 body a {
   color: #017369;
@@ -565,14 +767,36 @@ body a ul li {
 .container {
   display: flex;
   flex-direction: column;
+  background: #132223;
   gap: 64px;
   width: auto;
-  padding: 0 10rem;
   margin: 0 auto;
+  padding: 0 10rem;
 }
 
 button, input, select, option {
   font-family: Space Mono, sans-serif;
+}
+
+@media (width <= 1920px) {
+  .container {
+    padding: 2rem 8rem;
+  }
+}
+@media (width <= 1199px) {
+  .container {
+    padding: 0 6rem;
+  }
+}
+@media (width <= 992px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+@media (width <= 768px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

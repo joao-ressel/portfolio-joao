@@ -8,7 +8,6 @@
 @import 'footer'
 @import 'button'
 
-
 body
   font-family: Space Mono, sans-serif
   margin: 0
@@ -23,8 +22,8 @@ input, textarea
   font-size: 16px
 
 body
-  background-color: variables.$slate-gray4
   color: variables.$slate-gray2
+  background-color: variables.$slate-gray4
 
   a
     color: variables.$slate-gray1
@@ -41,10 +40,27 @@ body
 
 .container
   @include mixins.flex-column
+  background: variables.$slate-gray4
   gap: 64px
   width: auto
-  padding: 0 10rem
   margin: 0 auto
+  padding: 0 10rem
 
 button, input, select, option
   font-family: Space Mono, sans-serif
+
+@media (width <= 1920px)
+  .container
+    padding: 2rem 8rem
+
+@media (width <= 1199px)
+  .container
+    padding: 0 6rem
+
+@media ( width <= 992px)
+  .container
+    padding: 0 4rem
+
+@media (width <= 768px)
+  .container
+    padding: 0 2rem
